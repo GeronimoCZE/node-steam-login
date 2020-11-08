@@ -1,0 +1,70 @@
+.content{
+    height: 120vh;
+    width: 100%;
+    padding: 3%;
+    background: url(/public/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar-brand{
+    font-size: 26px;
+}
+
+#TFSteamMarket::after{
+    content: 'NEW';
+    position: relative;
+    height: 8px;
+    bottom: 40%;
+    color: red;
+
+    font-size: 8px;
+}
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --avatar: linear-gradient(135deg,  rgb(223, 151, 18) 60%, transparent 60%);
+    --load: linear-gradient(45deg, rgb(245, 182, 8),rgb(38, 0, 119), rgb(38, 0, 119),rgb(245, 182, 8));
+    --unusual: linear-gradient(135deg,  rgb(115, 58, 238) 60%, transparent 60%);
+    --strange: linear-gradient(135deg,  orangered 60%, transparent 60%);
+    --skin: linear-gradient(135deg,  white 60%, transparent 60%);
+    --unique: linear-gradient(135deg,  yellow 60%, transparent 60%);
+    --buy: linear-gradient(135deg,  orangered 60%, transparent 60%);
+    --sell: linear-gradient(135deg,  greenyellow 60%, transparent 60%);
+    --filter: linear-gradient(135deg,  rgb(49, 49, 49) 60%, transparent 60%);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+    background-color: white;
+    overflow: scroll;
+}
+body {
+    /* This is the magic bit for Firefox */
+    scrollbar-width: none;
+}
+  
+body::-webkit-scrollbar {
+    /* This is the magic bit for WebKit */
+    display: none;
+}
+
+.login-msg{
+    height: 300px;
+    width: 500px;
+    background-color: rgb(31, 31, 31);
+    border-style: solid;
+    position: relative;
+    left: 40%;
+    border-radius: 20px;
+    border-color: black;
+    border-width: 5px;
+}
