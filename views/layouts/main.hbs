@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/public/style.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-md bg-light navbar-light">
+            {{#if user}} <!-- resize if small device -->
+            <a class="navbar-brand" href="#">Store</a>
+            {{else}}
+            <a class="navbar-brand" href="/auth/steam">Store</a>
+            {{/if}}
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav">
+			  <li class="nav-item">
+                {{#if user}} <!-- resize if small device -->
+                <a class="nav-link" href="#">Price Check</a>
+				{{else}}
+                <a class="nav-link" href="/auth/steam">Price Check</a>
+				{{/if}}
+			  </li>
+			  <li class="nav-item">
+                {{#if user}} <!-- resize if small device -->
+                <a id="TFSteamMarket" class="nav-link" href="#">TF2 Steam Market</a>
+				{{else}}
+                <a id="TFSteamMarket" class="nav-link" href="/auth/steam">TF2 Steam Market</a>
+				{{/if}}
+			  </li>
+			</ul>
+			  <div class="ml-auto">
+
+				  {{#if user}} <!-- resize if small device -->
+                    <div class="login-dropdown"></div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="{{user.avatar}}" alt="">
+                            <span>{{user.personaname}}</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Profile setting <img height="25px" src="https://banner2.cleanpng.com/20180405/osq/kisspng-login-google-account-computer-icons-user-activity-5ac6bbe6ecba00.2369522615229736709696.jpg" alt=""></a>
+                            <a class="dropdown-item" href="#"></a>
+                            <a class="dropdown-item" href="/logout">Logout</a>
+                        </div>
+                    </div>
+				  {{else}}
+				  <a href="/auth/steam"><img src="https://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_01.png"></a>
+				  {{/if}}
+			  </div>
+		  </div> 
+		</nav>
+		
+		<div class="content">
+			<div class="row">
+			
+				<div class="col-sm-12">
+					{{#if user}}
+                        
+					{{else}}
+					
+					{{/if}}
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
